@@ -1,7 +1,7 @@
 package za.ac.cput.domain;
 
 public class Adventurers {
-    private int adventurerId;
+    private String adventurerId;
     private String firstName;
     private String lastName;
     private String Race;
@@ -18,7 +18,7 @@ public class Adventurers {
         this.age = build.age;
     }
 
-    public int getAdventurerId() {
+    public String getAdventurerId() {
         return adventurerId;
     }
 
@@ -50,13 +50,13 @@ public class Adventurers {
     }
 
     public static class Builder {
-        private int adventuerId;
+        private String adventuerId;
         private String firstName;
         private String lastName;
         private String Race;
         private int age;
 
-        public Builder setAdventuerId(int adventuerId) {
+        public Builder setAdventuerId(String adventuerId) {
             this.adventuerId = adventuerId;
             return this;
         }

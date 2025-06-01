@@ -4,7 +4,7 @@ import za.ac.cput.domain.Employees;
 import za.ac.cput.util.Helper;
 
 public class EmployeeFactory {
-    public static Employees createEmployees(int employeeId, String firstName, String lastName, String email,  int phoneNumber) {
+    public static Employees createEmployees(String employeeId, String firstName, String lastName, String email,  int phoneNumber) {
         if (Helper.isNullorEmpty(firstName) || Helper.isNullorEmpty(lastName) || Helper.isNullorEmpty(email) )
             return null;
         return new Employees.Builder()
@@ -17,7 +17,7 @@ public class EmployeeFactory {
 
     }
 
-    public static Employees createEmployees(int employeeId, String firstName, String lastName) {
+    public static Employees createEmployees(String employeeId, String firstName, String lastName) {
         return new Employees.Builder()
                 .setEmployeeId(employeeId)
                 .setFirstName(firstName)

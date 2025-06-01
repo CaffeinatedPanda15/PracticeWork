@@ -11,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class EmployeeFactoryTest {
 
-    private static Employees e1 = EmployeeFactory.createEmployees(12345, "Marcus", "Aurelius");
-    private static Employees e2 = EmployeeFactory.createEmployees(123445, "Markus", "Aurellius", "ffff@gmail.com", 123456789);
-    private static Employees e3 = EmployeeFactory.createEmployees(1234457, "Markus", "Aurellius", "ffff@gmail.com", 123456789);
+    private static Employees e1 = EmployeeFactory.createEmployees("12345", "Marcus", "Aurelius");
+    private static Employees e2 = EmployeeFactory.createEmployees("123445", "Markus", "Aurellius", "ffff@gmail.com", 123456789);
+    private static Employees e3 = EmployeeFactory.createEmployees("1234457", "Markus", "Aurellius", "ffff@gmail.com", 123456789);
     @Test
     @Order(1)
     public void testCreateEmployees() {

@@ -18,24 +18,24 @@ public class Car {
         this.CarYear = build.CarYear;
     }
 
-    public void setCarName(String carName) {
-        this.carName = carName;
+    public String getCarName() {
+        return carName;
     }
 
-    public void setCarModel(String carModel) {
-        this.carModel = carModel;
+    public String getCarModel() {
+        return carModel;
     }
 
-    public void setCarBrand(String carBrand) {
-        this.carBrand = carBrand;
+    public String getCarBrand() {
+        return carBrand;
     }
 
-    public void setCarColour(String carColour) {
-        this.carColour = carColour;
+    public String getCarColour() {
+        return carColour;
     }
 
-    public void setCarYear(int carYear) {
-        CarYear = carYear;
+    public int getCarYear() {
+        return CarYear;
     }
 
     @Override

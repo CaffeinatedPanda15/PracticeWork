@@ -4,7 +4,7 @@ import za.ac.cput.domain.Adventurers;
 import za.ac.cput.util.Helper;
 
 public class AdventurersFactory {
-    public static Adventurers createAdventurer(int adventurerId, String firstName, String lastName, String Race, int Age) {
+    public static Adventurers createAdventurer(String adventurerId, String firstName, String lastName, String Race, int Age) {
         if (Helper.isNullorEmpty(firstName) || Helper.isNullorEmpty(lastName) || Helper.isNullorEmpty(Race))
             return null;
         return new Adventurers.Builder()
@@ -16,7 +16,7 @@ public class AdventurersFactory {
                 .build();
     }
 
-    public static Adventurers createAdventurer(int adventurerId, String firstName, String lastName) {
+    public static Adventurers createAdventurer(String adventurerId, String firstName, String lastName) {
             if (Helper.isNullorEmpty(firstName) || Helper.isNullorEmpty(lastName))
                 return null;
         return new Adventurers.Builder()

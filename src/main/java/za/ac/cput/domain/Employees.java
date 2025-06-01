@@ -1,7 +1,7 @@
 package za.ac.cput.domain;
 
 public class Employees {
-    private int employeeId;
+    private String employeeId;
     private String firstName;
     private String lastName;
     private String email;
@@ -18,7 +18,7 @@ public class Employees {
         this.phoneNumber = build.phoneNumber;
     }
 
-    public int getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
@@ -50,13 +50,13 @@ public class Employees {
     }
 
     public static class Builder {
-        private int employeeId;
+        private String employeeId;
         private String firstName;
         private String lastName;
         private String email;
         private int phoneNumber;
 
-        public Builder setEmployeeId(int employeeId) {
+        public Builder setEmployeeId(String employeeId) {
             this.employeeId = employeeId;
             return this;
         }
@@ -82,6 +82,15 @@ public class Employees {
         }
         public Employees build() {
             return new Employees(this);
+        }
+
+        public Builder copy(Employees employee) {
+            this.employeeId = employee.employeeId;
+            this.firstName = employee.firstName;
+            this.lastName = employee.lastName;
+            this.email = employee.email;
+            this.phoneNumber =  employee.phoneNumber;
+            return this;
         }
     }
 }//end of class
