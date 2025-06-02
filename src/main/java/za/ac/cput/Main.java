@@ -1,11 +1,15 @@
 package za.ac.cput;
 
-import za.ac.cput.domain.*;
-import za.ac.cput.factory.*;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-
+        SpringApplication.run(Main.class, args);
 
        // Book b1 = BookFactory.createBook("1984", "Orson wells", "Oxford", 55);
 

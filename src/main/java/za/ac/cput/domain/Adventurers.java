@@ -81,6 +81,14 @@ public class Adventurers {
             return this;
         }
 
+        public Builder copy(Adventurers adventurers) {
+            this.adventuerId = adventurers.adventurerId;
+            this.firstName = adventurers.firstName;
+            this.lastName = adventurers.lastName;
+            this.Race = adventurers.Race;
+            this.age = adventurers.age;
+            return this;
+        }
         public Adventurers build() {
             return new Adventurers(this);
         }

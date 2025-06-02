@@ -6,7 +6,7 @@ import za.ac.cput.domain.Contacts;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ContactsFactoryTest {
-        private static Contacts c1 = ContactsFactory.createContacts(123456789, "4 Lyndoc Crescent");
+        private static Contacts c1 = ContactsFactory.createContacts("123456789", "4 Lyndoc Crescent");
 
         @Test
         public void testCreateContacts() {

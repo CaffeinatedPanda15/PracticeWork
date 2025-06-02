@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class AdventurersFactoryTest {
 
-       private static  Adventurers a1 = AdventurersFactory.createAdventurer(12345, "Marcus",
+       private static  Adventurers a1 = AdventurersFactory.createAdventurer("12345", "Marcus",
                                                                     "Johnson", "Orc", 55);
 
-       private static Adventurers a2 = AdventurersFactory.createAdventurer(12345, "Marcus", "Johnson");
+       private static Adventurers a2 = AdventurersFactory.createAdventurer("12345", "Marcus", "Johnson");
 
        @Test
        @Order(1)

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AdventurersRepository implements IRepository <Adventurers, String> {
 
-    public static IRepository repository = null;
+    public static IRepository repository;
 
     private List<Adventurers> AdventurersList;
 

@@ -1,13 +1,13 @@
 package za.ac.cput.domain;
 
 public class Contacts {
-    private int contactNumber;
+    private String contactNumber;
     private String homeAddress;
 
     private Contacts() {
     }
 
-    public int getContactNumber() {
+    public String getContactNumber() {
         return contactNumber;
     }
 
@@ -29,10 +29,10 @@ public class Contacts {
     }
 
     public static class Builder {
-        private int contactNumber;
+        private String contactNumber;
         private String homeAddress;
 
-        public Builder setContactNumber(int contactNumber){
+        public Builder setContactNumber(String contactNumber){
             this.contactNumber =  contactNumber;
             return this;
         }
