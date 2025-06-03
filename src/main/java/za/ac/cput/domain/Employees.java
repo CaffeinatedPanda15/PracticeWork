@@ -1,13 +1,18 @@
 package za.ac.cput.domain;
 
+
+
+
+@Entity
 public class Employees {
+    @Id
     private String employeeId;
     private String firstName;
     private String lastName;
     private String email;
     private int phoneNumber;
 
-    private Employees() {
+    protected Employees() {
     }
 
     private Employees(Builder build) {

@@ -1,7 +1,6 @@
 package za.ac.cput.service;
 
 import za.ac.cput.domain.Adventurers;
-import za.ac.cput.repository.AdventurersRepository;
 
 import java.util.ArrayList;
 import java.util.List;
