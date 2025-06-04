@@ -1,33 +1,31 @@
 package za.ac.cput.domain;
 
 
-
 import jakarta.persistence.*;
 
-
 @Entity
-public class Employees {
+@Table(name = "Customers")
+public class Customer {
     @Id
-    private String employeeId;
+    private String customerId;
     private String firstName;
     private String lastName;
     private String email;
-    private int phoneNumber;
-    private Long id;
+    private String phoneNumber;
 
-    protected Employees() {
+    public Customer() {
     }
 
-    private Employees(Builder build) {
-        this.employeeId = build.employeeId;
-        this.firstName = build.firstName;
-        this.lastName = build.lastName;
-        this.email = build.email;
-        this.phoneNumber = build.phoneNumber;
+    private Customer(Builder builder) {
+        this.customerId = builder.customerId;
+        this.firstName = builder.firstName;
+        this.lastName = builder.lastName;
+        this.email = builder.email;
+        this.phoneNumber = builder.phoneNumber;
     }
 
-    public String getEmployeeId() {
-        return employeeId;
+    public String getCustomerId() {
+        return customerId;
     }
 
     public String getFirstName() {
@@ -42,31 +40,31 @@ public class Employees {
         return email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
     @Override
     public String toString() {
-        return "Employees{" +
-                "employeeId=" + employeeId +
+        return "Customer{" +
+                "customerId='" + customerId + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
 
 
     public static class Builder {
-        private String employeeId;
+        private String customerId;
         private String firstName;
         private String lastName;
         private String email;
-        private int phoneNumber;
+        private String phoneNumber;
 
-        public Builder setEmployeeId(String employeeId) {
-            this.employeeId = employeeId;
+        public Builder setCustomerId(String customerId) {
+            this.customerId = customerId;
             return this;
         }
 
@@ -85,21 +83,23 @@ public class Employees {
             return this;
         }
 
-        public Builder setPhoneNumber(int phoneNumber) {
+        public Builder setPhoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
-        public Employees build() {
-            return new Employees(this);
-        }
 
-        public Builder copy(Employees employee) {
-            this.employeeId = employee.employeeId;
-            this.firstName = employee.firstName;
-            this.lastName = employee.lastName;
-            this.email = employee.email;
-            this.phoneNumber =  employee.phoneNumber;
+        public Builder copy(Customer customer){
+            this.customerId = customer.customerId;
+            this.firstName = customer.firstName;
+            this.lastName = customer.lastName;
+            this.email = customer.email;
+            this.phoneNumber = customer.phoneNumber;
             return this;
         }
+
+        public Customer build() {
+            return new Customer(this);
+        }
     }
+
 }//end of class

@@ -1,15 +1,18 @@
 package za.ac.cput.service;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import za.ac.cput.domain.Employees;
 import za.ac.cput.factory.EmployeeFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class EmployeesServiceTest {
 
-    private IEmployeesService service = EmployeesService.getService();
-    private static Employees employees = EmployeeFactory.createEmployees("123456789", "Markus", "Johnson", "Poes@gmail.com", 1234425452);
+    private IEmployeesService service;
+    private Employees employees = EmployeeFactory.createEmployees("123456789", "Markus", "Johnson", "Poes@gmail.com", 1234425452);
 
    @Test
     void create() {
